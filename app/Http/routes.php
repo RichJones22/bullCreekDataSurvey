@@ -20,4 +20,5 @@ Route::get('/', function () {
     return view('pages.survey');
 });
 
-Route::post('survey/store', ['as' => 'survey.store',    'uses' => 'SurveyController@store']);
+Route::get('survey/show'  , ['as' => 'survey.show',  'uses' => 'SurveyController@show']);
+Route::post('survey/store', ['as' => 'survey.store', 'uses' => 'SurveyController@store']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\helpers;
 use App\Survey;
 use App\Http\Requests;
 use App\Http\Requests\SurveyRequest;
@@ -39,13 +40,13 @@ class SurveyController extends Controller
      */
     public function store(SurveyRequest $request)
     {
-        // validated Survey form via SurveyRequest
+        // validation performed via SurveyRequest.php
 
         // persist the Survey to the db.
         Survey::create($request->all());
 
         // send a flash message that Survey was added.
-        session()->flash('flash_message', 'Your Survey was added... Thanks!');
+        flash()->success('Success', 'Your Survey added... Thanks!');
 
         // redirect back to the Survey page.
         return redirect()->back();
