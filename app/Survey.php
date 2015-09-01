@@ -8,6 +8,11 @@ class Survey extends Model
 {
     protected $table = 'surveys';
 
+    /**
+     * Fillable fields for a Survey.
+     *
+     * @var array
+     */
     protected $fillable = [
         'name',
         'email',
@@ -15,11 +20,7 @@ class Survey extends Model
         'message'
     ];
 
-    public function survey()
-    {
-        return $this->all();
-    }
-
+    // currently this app only has one table, Surveys.  Surveys has not relationships
 
 
 }

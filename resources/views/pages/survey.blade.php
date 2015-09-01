@@ -11,7 +11,7 @@
             </li>
             <li>
                 <label for="name">Name:</label>
-                <input type="text" name="name" placeholder="John Doe" required />
+                <input type="text" name="name" placeholder="John Doe" required/>
             </li>
             <li>
                 <label for="email">Email:</label>
