@@ -11,6 +11,13 @@
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.survey');
 });
+
+Route::post('survey/store', ['as' => 'survey.store',    'uses' => 'SurveyController@store']);
