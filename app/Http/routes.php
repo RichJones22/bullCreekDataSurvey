@@ -11,14 +11,15 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-
 Route::get('/', function () {
     return view('pages.survey');
 });
 
-Route::get('survey/show'  , ['as' => 'survey.show',  'uses' => 'SurveyController@show']);
+//
+//Route::get('/admin', function () {
+//    return view('pages.admin');
+//});
+
+
+Route::get('/admin'  , ['as' => 'admin.show',  'uses' => 'AdminController@show']);
 Route::post('survey/store', ['as' => 'survey.store', 'uses' => 'SurveyController@store']);
