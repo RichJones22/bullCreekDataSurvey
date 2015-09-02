@@ -12,6 +12,12 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -51,6 +57,8 @@ class AdminController extends Controller
      */
     public function show()
     {
+        // a guard is needed here to force the user to login if not already logged in...
+
         $surveys = Survey::orderBy('created_at', 'DESC')->get();
 //        $surveys = Survey::all();
 //        $surveys = DB::table('surveys')->select('*')->orderBy('created_at')->get();

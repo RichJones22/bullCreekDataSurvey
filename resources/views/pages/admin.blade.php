@@ -2,9 +2,7 @@
 
 @section('content')
 
-    {{--<h1>Admin Page BCD Survey</h1>--}}
-
-    <h1 class="page-heading">Admin Page BCD Survey</h1>
+    <h1 class="page-heading">Surveys</h1>
 
     <hr>
 
