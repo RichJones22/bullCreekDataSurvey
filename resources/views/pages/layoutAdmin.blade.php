@@ -6,7 +6,7 @@
     <link rel="stylesheet" media="screen" href="/css/app.css" >
 </head>
 <body>
-    @include('partials.AdminNav')
+    @include('partials.adminNav')
 
     <div class="container">
         @yield('content')
