@@ -48,7 +48,8 @@ class SurveyController extends Controller
         $survey = Survey::create($request->all());
 
         // send email
-        $this->sendEmail($survey);
+        // no need for mail at this time.
+//        $this->sendEmail($survey);
 
         // send a flash message that Survey was added.
         flash()->success('Success', 'Survey added... Thanks!');
